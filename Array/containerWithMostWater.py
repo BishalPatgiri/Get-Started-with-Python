@@ -4,6 +4,9 @@
 # Notice that you may not slant the container.
 # eg:  [1,8,6,2,5,4,8,3,7]==49
 
+## Brute force approach
+
+
 
 def findContainerWithMostWater(array):
     left=0
