@@ -7,7 +7,7 @@
 ## Brute force approach
 
 
-
+## Two pointer approach
 def findContainerWithMostWater(array):
     left=0
     right=len(array)-1
