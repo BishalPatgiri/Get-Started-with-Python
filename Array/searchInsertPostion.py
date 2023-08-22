@@ -2,14 +2,18 @@
 # You must write an algorithm with O(log n) runtime complexity.
 
 def searchInsertPosition(nums,target):
-    if(nums.index(target)):
-        return nums.index(target)
-    else:
+    try:
+        if(nums.index(target)):
+           return nums.index(target);
+        
+    except:
         global val
-        val=0
+        val=0;
         for i in range(0,len(nums)-1):
             if(nums[i]<target):
               val=i;
         return val+1
     
 print("Inserted Position: ",searchInsertPosition([1,3,5,6],5))
+print("Inserted Position: ",searchInsertPosition([1,3,5,6],2))
+
