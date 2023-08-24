@@ -13,7 +13,17 @@ def searchInsertPosition(nums,target):
             if(nums[i]<target):
               val=i;
         return val+1
-    
+
 print("Inserted Position: ",searchInsertPosition([1,3,5,6],5))
 print("Inserted Position: ",searchInsertPosition([1,3,5,6],2))
 
+
+# Advance Algorith
+def searchInsertPosition(nums,target):
+    left=0
+    right=len(nums)
+    while(left<right):
+        
+          
+print("Inserted Position: ",searchInsertPosition([1,3,5,6],5))
+print("Inserted Position: ",searchInsertPosition([1,3,5,6],2))
