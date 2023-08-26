@@ -18,11 +18,27 @@ print("Inserted Position: ",searchInsertPosition([1,3,5,6],5))
 print("Inserted Position: ",searchInsertPosition([1,3,5,6],2))
 
 
-# Advance Algorith
+# Advance Algorith with log(n) complexity
 def searchInsertPosition(nums,target):
     left=0
-    right=len(nums)
+    right=len(nums)-1
+    lastVisited=0
     while(left<right):
+        if nums[left]==target:
+            return left 
+        elif nums[right]==target:
+            return right
+        else:
+            sum= round((left+right)/2)
+            if lastVisited==sum:
+                return right
+            if nums[sum]==target:
+                return sum
+            elif nums[sum]<target:
+                left=sum
+            elif nums[sum]>target:
+                right=sum
+            lastVisited=sum
         
           
 print("Inserted Position: ",searchInsertPosition([1,3,5,6],5))
