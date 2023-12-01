@@ -3,9 +3,20 @@
 
 # Brute-force approach 
 def mergeArr(num1,num2):
-    if num1[0]>num2[0]:
-        for i in num2:
-            num1.add(i)
-    return num1
-
+    result=[]
+    i=0
+    j=0
+    while i!=len(num1):
+        if(num1[i] and num2[j] and num1[i]>num2[j]):
+            result.append(num1[1])
+            i+=1;
+        elif(num2[j] and num2[j]>num1[i]):
+            result.append(num2[j])
+            j+=1;
+        elif(num1[i] and num2[j] and num2[j]==num1[i]):
+            result.append(num1[i])
+            result.append(num2[j])
+            i+=1
+            j+=1
+        
 print(mergeArr([1,2,3,0,0,0], [2,5,6]))
